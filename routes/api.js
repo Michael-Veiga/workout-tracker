@@ -37,5 +37,16 @@ router.put('/api/workouts/:id', ({ body, params }, res) => {
       res.json(err);
     });
 });
+// route to get all workout data from the backend
+router.get('/api/workouts/range', ({ query }, res) => {
+  // find all the data for a day that is greater than or equal to the query.start, and less than or equal to the query.end
+  Workout.find({ day: { $gte: query.start, $lte: query.end } })
+    .then(workoutdb => {
+      res.json(workoutdb);
+    })
+    .catch(err => {
+      res.json(err);
+    });
+});
 
 module.exports = router;
