@@ -34,8 +34,6 @@ ISC
 
 ## Contributors
 
-![Image of contributor](https://avatars2.githubusercontent.com/u/61660025?v=4)
-
 Michael Veiga
 
 ## Testing
@@ -54,4 +52,4 @@ Mongo is a lot like sql, so this homework was fairly straightforward. One of the
 
 ## Media
 
-![Image of deployed application](images\workoutTracker.JPG)
+![Image of deployed application](https://github.com/Michael-Veiga/workout-tracker/blob/master/images/workoutTracker.JPG?raw=true)
