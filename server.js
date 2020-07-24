@@ -9,16 +9,19 @@ const app = express();
 app.use(logger('dev'));
 
 app.use(express.urlencoded({ extended: true }));
-app.use(express.json('public'));
+app.use(express.json());
 
-let MONGO_URI = process.env.MONGO_URI || 'mongo://localhost/workout';
+app.use(express.static('public'));
+
+let MONGO_URI = process.env.MONGO_URI || 'mongodb://localhost/workout';
 mongoose.connect(MONGO_URI, {
   useNewUrlParser: true,
   useFindAndModify: false,
+  useUnifiedTopology: true,
 });
 
-app.use(require('./routes/apiRoutes'));
-app.use(require('./routes/htmlRoutes'));
+app.use(require('./routes/api.js'));
+app.use(require('./routes/view.js'));
 
 app.listen(PORT, function () {
   console.log(`App listening on PORT ${PORT}`);
