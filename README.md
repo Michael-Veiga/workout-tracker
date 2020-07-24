@@ -26,7 +26,7 @@ This application allows users to create and modify their own workout plans. Once
 
 ## Link to deployed application
 
-https://calm-stream-64860.herokuapp.com/
+https://immense-sierra-06898.herokuapp.com/
 
 ## Licenses
 
